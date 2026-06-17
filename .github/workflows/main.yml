@@ -57,6 +57,8 @@ jobs:
           if-no-files-found: ignore
 
       - name: Build debug APK
+        env:
+          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
         run: ./gradlew assembleDebug
 
       - name: Upload debug APK
